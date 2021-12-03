@@ -3,10 +3,10 @@ server:
 spring:
   redis:
     open: true  # 是否开启redis缓存  true开启   false关闭
-    database: 9
+    database: 0
     host: 127.0.0.1
     port: 6379
-    password: qaz123  # 密码（默认为空）
+    password:   # 密码（默认为空）
     timeout: 6000ms  # 连接超时时长（毫秒）
     jedis:
       pool:
@@ -14,18 +14,13 @@ spring:
         max-wait: -1ms      # 连接池最大阻塞等待时间（使用负值表示没有限制）
         max-idle: 10      # 连接池中的最大空闲连接
         min-idle: 5
+
+
 ca:
   config:
-    path: /ssl_k/java
-    root_path: root
-    root_alias: myRoot
-    server_path: mis
-    client_path: cli
-    default_pw: 123456
-    key_store_suffix: p12
-    server_name: server2
+    host: 172.16.10.220
+    port: 1818
+    server_name: server1
     server_subject: cs.dspread.net
-    city: beijing
-    state： beijing
 
 

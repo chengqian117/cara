@@ -28,21 +28,21 @@
         </filter>
     </appender>
     <!-- 开发、测试环境 -->
-    <springProfile name="dev,test">
+    <springProfile name="dev,test,local">
 <!--        <root level="DEBUG">-->
 <!--            <appender-ref ref="debug"/>-->
 <!--            <appender-ref ref="CONSOLE"/>-->
 <!--        </root>-->
         <logger name="org.springframework.web" level="INFO"/>
         <logger name="org.springboot.sample" level="INFO" />
-        <logger name="com.example.cara" level="DEBUG" />
+        <logger name="com.dspread.cara" level="DEBUG" />
     </springProfile>
 
     <!-- 生产环境 -->
     <springProfile name="prod">
         <logger name="org.springframework.web" level="ERROR"/>
         <logger name="org.springboot.sample" level="ERROR" />
-        <logger name="com.example.cara" level="ERROR" />
+        <logger name="com.dspread.cara" level="DEBUG" />
     </springProfile>
 
 </configuration>
