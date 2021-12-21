@@ -39,7 +39,7 @@ import java.util.Vector;
 @RequestMapping("/cara/ecc")
 @Api(value = "cara Ecc在线服务",tags = "cara Ecc在线服务")
 @Slf4j
-@Profile(value = {"prod","test"})
+@Profile("dev")
 public class EccCaraController {
 
     @Autowired

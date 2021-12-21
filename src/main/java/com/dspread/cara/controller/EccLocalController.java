@@ -34,7 +34,7 @@ import java.util.*;
 @RequestMapping("/ca/local/ecc")
 @Api(value = "ca Ecc离线服务",tags = "ca Ecc离线服务")
 @Slf4j
-@Profile("local")
+@Profile("dev")
 public class EccLocalController {
 
     @Autowired

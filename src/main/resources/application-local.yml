@@ -17,7 +17,7 @@ spring:
 
 ca:
   config:
-    path: D:\ssl_k\java
+    path: /ssl_k/java
     root_path: root
     root_alias: dspreadRoot
     default_pw: dspreadpwd

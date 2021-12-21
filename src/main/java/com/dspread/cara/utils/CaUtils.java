@@ -2,6 +2,8 @@ package com.dspread.cara.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import sun.security.x509.*;
 
@@ -18,6 +20,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 
 @Slf4j
+@Component
 public class CaUtils {
 
     private static final String CREATE_CER_ERROR="cer证书生成发生错误";
@@ -27,9 +30,20 @@ public class CaUtils {
     private static final String ALIAS_ERROR="对应alias无证书";
     private static final String PARAM_ERROR="参数异常";
 
-    private static final String DEFAULT_PASSWORD="123456";
 
-    public static final String PATH="D:\\ssl_k\\java";
+    private static  String DEFAULT_PASSWORD="123456";
+
+    public static  String PATH="D:\\ssl_k\\java";
+
+    @Value("${ca.config.path}")
+    public void setPath(String path) {
+        CaUtils.PATH = path;
+    }
+
+    @Value("${ca.config.default_pw}")
+    public void setPwd(String defaultPw) {
+        CaUtils.DEFAULT_PASSWORD = defaultPw;
+    }
 
     /**
      * 通过内置的rsa秘钥对生成秘钥库 默认有效时间三年

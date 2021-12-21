@@ -1,5 +1,10 @@
 server:
   port: 9001
+  ssl:
+    enabled: true
+    key-store-type: JKS
+    key-store: classpath:5690375_cs.dspread.net.jks
+    key-store-password: 55WEUnWw
 spring:
   profiles:
     active: dev

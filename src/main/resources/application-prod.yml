@@ -17,6 +17,7 @@ spring:
 
 ca:
   config:
+    path: /ssl_k/java
     host: 172.16.10.220
     port: 1818
     server_name: server1
